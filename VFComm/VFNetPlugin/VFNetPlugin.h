@@ -1,24 +1,23 @@
-// -------------------------------------------------------------------------
-//    @FileName			:    Tutorial1.h
+//------------------------------------------------------------------------ -
+//    @FileName			:    VFNetPlugin.h
 //    @Author           :    WenZheng.Xu
-//    @Date             :    2014-05-14 08:51
-//    @Module           :   Tutorial1
+//    @Date             :    2017-02-15
+//    @Module           :    VFNetPlugin
 //
 // -------------------------------------------------------------------------
-
-#ifndef VF_TUTORIAL1_H
-#define VF_TUTORIAL1_H
 
 #include "VFComm/VFPluginModule/VFIPlugin.h"
 #include "VFComm/VFPluginModule/VFIPluginManager.h"
 
-class Tutorial1 : public VFIPlugin
+//////////////////////////////////////////////////////////////////////////
+class VFNetPlugin : public VFIPlugin
 {
 public:
-    Tutorial1(VFIPluginManager* p)
+	VFNetPlugin(VFIPluginManager* p)
     {
         pPluginManager = p;
     }
+
     virtual const int GetPluginVersion();
 
     virtual const std::string GetPluginName();
@@ -27,4 +26,3 @@ public:
 
     virtual void Uninstall();
 };
-#endif

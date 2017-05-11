@@ -18,18 +18,10 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="VFCConsistentHash.hpp" />
-    <ClInclude Include="VFList.hpp" />
-    <ClInclude Include="VFMap.hpp" />
-    <ClInclude Include="VFMapEx.hpp" />
-    <ClInclude Include="VFQueue.hpp" />
-    <ClInclude Include="VFSingleton.hpp" />
-  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>
-    <ProjectGuid>{F16F0E7C-E0FC-4A6B-A17B-CC2BA210AC3A}</ProjectGuid>
-    <RootNamespace>VFCore</RootNamespace>
+    <ProjectGuid>{1044D7D8-0010-42B9-B168-9EFBF158943A}</ProjectGuid>
+    <RootNamespace>VFNetPlugin</RootNamespace>
     <WindowsTargetPlatformVersion>10.0.15063.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -78,18 +70,14 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <TargetExt>.dll</TargetExt>
     <TargetName>$(ProjectName)_d</TargetName>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
-    <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\libevent\WIN32-Code;$(SolutionDir)Dependencies\libevent\include;$(SolutionDir)Dependencies;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -106,7 +94,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)Dependencies\libevent\WIN32-Code;$(SolutionDir)Dependencies\libevent\include;$(SolutionDir)Dependencies;$(SolutionDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
@@ -126,6 +114,30 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="VFCHttpNet.cpp" />
+    <ClCompile Include="VFCHttpServerModule.cpp" />
+    <ClCompile Include="VFCNet.cpp" />
+    <ClCompile Include="VFCNetClientModule.cpp" />
+    <ClCompile Include="VFCNetModule.cpp" />
+    <ClCompile Include="VFCWebsocketModule.cpp" />
+    <ClCompile Include="VFCWS.cpp" />
+    <ClCompile Include="VFNetPlugin.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="VFCHttpNet.h" />
+    <ClInclude Include="VFCHttpServerModule.h" />
+    <ClInclude Include="VFCNet.h" />
+    <ClInclude Include="VFCNetClientModule.h" />
+    <ClInclude Include="VFCNetModule.h" />
+    <ClInclude Include="VFCWebsocketModule.h" />
+    <ClInclude Include="VFCWS.h" />
+    <ClInclude Include="VFIHttpNet.h" />
+    <ClInclude Include="VFINet.h" />
+    <ClInclude Include="VFIWS.h" />
+    <ClInclude Include="VFNetPlugin.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -9,9 +9,14 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VFPluginLoader", "VFComm\VF
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VFPluginModule", "VFPluginModule", "{2A511B46-F6C8-4749-A6A7-7DE88EA85D18}"
 	ProjectSection(SolutionItems) = preProject
+		VFComm\VFPluginModule\VFGUID.h = VFComm\VFPluginModule\VFGUID.h
+		VFComm\VFPluginModule\VFIHttpServerModule.h = VFComm\VFPluginModule\VFIHttpServerModule.h
 		VFComm\VFPluginModule\VFIModule.h = VFComm\VFPluginModule\VFIModule.h
+		VFComm\VFPluginModule\VFINetClientModule.h = VFComm\VFPluginModule\VFINetClientModule.h
+		VFComm\VFPluginModule\VFINetModule.h = VFComm\VFPluginModule\VFINetModule.h
 		VFComm\VFPluginModule\VFIPlugin.h = VFComm\VFPluginModule\VFIPlugin.h
 		VFComm\VFPluginModule\VFIPluginManager.h = VFComm\VFPluginModule\VFIPluginManager.h
+		VFComm\VFPluginModule\VFIWebsocketModule.h = VFComm\VFPluginModule\VFIWebsocketModule.h
 		VFComm\VFPluginModule\VFPlatform.h = VFComm\VFPluginModule\VFPlatform.h
 	EndProjectSection
 EndProject
@@ -20,6 +25,8 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "VFTutorial", "VFTutorial", "{AB855B4C-A2C6-468C-BF2D-6F49FF9E44FA}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TutorialOne", "VFTutorial\TutorialOne\TutorialOne.vcxproj", "{F9E0EAD8-2DA8-4383-A884-8BA346798ED9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "VFNetPlugin", "VFComm\VFNetPlugin\VFNetPlugin.vcxproj", "{1044D7D8-0010-42B9-B168-9EFBF158943A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +60,14 @@ Global
 		{F9E0EAD8-2DA8-4383-A884-8BA346798ED9}.Release|x64.Build.0 = Release|x64
 		{F9E0EAD8-2DA8-4383-A884-8BA346798ED9}.Release|x86.ActiveCfg = Release|Win32
 		{F9E0EAD8-2DA8-4383-A884-8BA346798ED9}.Release|x86.Build.0 = Release|Win32
+		{1044D7D8-0010-42B9-B168-9EFBF158943A}.Debug|x64.ActiveCfg = Debug|x64
+		{1044D7D8-0010-42B9-B168-9EFBF158943A}.Debug|x64.Build.0 = Debug|x64
+		{1044D7D8-0010-42B9-B168-9EFBF158943A}.Debug|x86.ActiveCfg = Debug|Win32
+		{1044D7D8-0010-42B9-B168-9EFBF158943A}.Debug|x86.Build.0 = Debug|Win32
+		{1044D7D8-0010-42B9-B168-9EFBF158943A}.Release|x64.ActiveCfg = Release|x64
+		{1044D7D8-0010-42B9-B168-9EFBF158943A}.Release|x64.Build.0 = Release|x64
+		{1044D7D8-0010-42B9-B168-9EFBF158943A}.Release|x86.ActiveCfg = Release|Win32
+		{1044D7D8-0010-42B9-B168-9EFBF158943A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -62,5 +77,6 @@ Global
 		{2A511B46-F6C8-4749-A6A7-7DE88EA85D18} = {6E5303A4-B111-4F90-A4FE-C5319860B1B3}
 		{F16F0E7C-E0FC-4A6B-A17B-CC2BA210AC3A} = {6E5303A4-B111-4F90-A4FE-C5319860B1B3}
 		{F9E0EAD8-2DA8-4383-A884-8BA346798ED9} = {AB855B4C-A2C6-468C-BF2D-6F49FF9E44FA}
+		{1044D7D8-0010-42B9-B168-9EFBF158943A} = {6E5303A4-B111-4F90-A4FE-C5319860B1B3}
 	EndGlobalSection
 EndGlobal
