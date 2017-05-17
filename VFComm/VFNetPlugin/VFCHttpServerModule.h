@@ -4,7 +4,7 @@
 #include <iostream>
 #include "VFComm/VFNetPlugin/VFCHttpNet.h"
 #include "VFComm/VFPluginModule/VFIHttpServerModule.h"
-#include "VFComm/VFPluginModule/VFILogModule.h"
+//#include "VFComm/VFPluginModule/VFILogModule.h"
 
 class VFCHttpServerModule
 	: public VFIHttpServerModule
@@ -28,7 +28,7 @@ public:
 	virtual VFIHttpNet* GetHttpNet();
 
 private:
-	VFILogModule* mLogModule;
+//	VFILogModule* mLogModule;
 
 	VFCHttpNet* mHttpNet;
 	std::map<std::string, HTTPNET_RECEIVE_FUNCTOR_PTR> mMsgCBMap;

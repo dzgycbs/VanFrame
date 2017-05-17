@@ -12,6 +12,7 @@
 #include <string>
 #include "VFComm/VFCore/VFMap.hpp"
 #include "VFComm/VFCore/VFList.hpp"
+#include "VFGUID.h"
 //#include "VFComm/VFCore/VFDataList.hpp"
 //#include "VFComm/VFCore/VFIRecord.h"
 

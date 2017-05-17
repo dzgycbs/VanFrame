@@ -93,22 +93,22 @@ public:
 		return xIdent;
 	}
 
-	static VFVector2 PBToVF(VFMsg::Vector2 value)
-	{
-		VFVector2  vector;
-		vector.SetX(value.x());
-		vector.SetY(value.y());
-		return vector;
-	}
+	//static VFVector2 PBToVF(VFMsg::Vector2 value)
+	//{
+	//	VFVector2  vector;
+	//	vector.SetX(value.x());
+	//	vector.SetY(value.y());
+	//	return vector;
+	//}
 
-	static VFVector3 PBToVF(VFMsg::Vector3 value)
-	{
-		VFVector3  vector;
-		vector.SetX(value.x());
-		vector.SetY(value.y());
-		vector.SetZ(value.z());
-		return vector;
-	}
+	//static VFVector3 PBToVF(VFMsg::Vector3 value)
+	//{
+	//	VFVector3  vector;
+	//	vector.SetX(value.x());
+	//	vector.SetY(value.y());
+	//	vector.SetZ(value.z());
+	//	return vector;
+	//}
 
 	static VFMsg::Ident VFToPB(VFGUID xID)
 	{
@@ -119,22 +119,22 @@ public:
 		return xIdent;
 	}
 
-	static VFMsg::Vector2 VFToPB(VFVector2 value)
-	{
-		VFMsg::Vector2  vector;
-		vector.set_x(value.X());
-		vector.set_y(value.Y());
-		return vector;
-	}
+	//static VFMsg::Vector2 VFToPB(VFVector2 value)
+	//{
+	//	VFMsg::Vector2  vector;
+	//	vector.set_x(value.X());
+	//	vector.set_y(value.Y());
+	//	return vector;
+	//}
 
-	static VFMsg::Vector3 VFToPB(VFVector3 value)
-	{
-		VFMsg::Vector3  vector;
-		vector.set_x(value.X());
-		vector.set_y(value.Y());
-		vector.set_z(value.Z());
-		return vector;
-	}
+	//static VFMsg::Vector3 VFToPB(VFVector3 value)
+	//{
+	//	VFMsg::Vector3  vector;
+	//	vector.set_x(value.X());
+	//	vector.set_y(value.Y());
+	//	vector.set_z(value.Z());
+	//	return vector;
+	//}
 
 	template<typename BaseType>
 	bool AddReceiveCallBack(const int nMsgID, BaseType* pBase, void (BaseType::*handleRecieve)(const int, const int, const char*, const uint32_t))

@@ -1,3 +1,4 @@
+cd x64
 cd Debug
 
 echo Starting NFMasterServer...

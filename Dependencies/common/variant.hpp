@@ -164,15 +164,15 @@ class bad_variant_access : public std::runtime_error
 
 }; // class bad_variant_access
 
-template <typename R = void>
-struct MAPBOX_VARIANT_DEPRECATED static_visitor
-{
-    using result_type = R;
-
-  protected:
-    static_visitor() {}
-    ~static_visitor() {}
-};
+//template <typename R = void>
+//struct MAPBOX_VARIANT_DEPRECATED static_visitor
+//{
+//    using result_type = R;
+//
+//  protected:
+//    static_visitor() {}
+//    ~static_visitor() {}
+//};
 
 namespace detail {
 
