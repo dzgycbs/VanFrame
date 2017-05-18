@@ -60,27 +60,25 @@ bool VFCScheduleModule::Execute()
 			if (nNow > pSchedule->mnNextTriggerTime)
 			{
 				std::map<VFGUID, std::string>::iterator itRet = mObjectRemoveList.find(pSchedule->self);
-				if (itRet == mObjectRemoveList.end())
+				if (itRet != mObjectRemoveList.end() && itRet->second == pSchedule->mstrScheduleName)continue;
+				
+				if (pSchedule->mnRemainCount > 0 || pSchedule->mbForever == true)
 				{
-					if (itRet->second != pSchedule->mstrScheduleName)
-					{
-						if (pSchedule->mnRemainCount > 0 || pSchedule->mbForever == true)
-						{
-							pSchedule->mnRemainCount--;
-							pSchedule->DoHeartBeatEvent();
+					pSchedule->mnRemainCount--;
+					pSchedule->DoHeartBeatEvent();
 
-							if (pSchedule->mnRemainCount <= 0 && pSchedule->mbForever == false)
-							{
-								mObjectRemoveList.insert(std::map<VFGUID, std::string>::value_type(pSchedule->self, pSchedule->mstrScheduleName));
-							}
-							else
-							{
-								VFINT64 nNextCostTime = VFINT64(pSchedule->mfIntervalTime * 1000) * (pSchedule->mnAllCount - pSchedule->mnRemainCount);
-								pSchedule->mnNextTriggerTime = pSchedule->mnStartTime + nNextCostTime;
-							}
-						}
+					if (pSchedule->mnRemainCount <= 0 && pSchedule->mbForever == false)
+					{
+						mObjectRemoveList.insert(std::map<VFGUID, std::string>::value_type(pSchedule->self, pSchedule->mstrScheduleName));
+					}
+					else
+					{
+						VFINT64 nNextCostTime = VFINT64(pSchedule->mfIntervalTime * 1000) * (pSchedule->mnAllCount - pSchedule->mnRemainCount + 1);
+						pSchedule->mnNextTriggerTime = pSchedule->mnStartTime + nNextCostTime;
+						cout << " Next Time:" << pSchedule->mnNextTriggerTime << " Start Time:" << pSchedule->mnStartTime << " Next Cost Time:" << nNextCostTime << " Now Time:" << nNow << endl;
 					}
 				}
+
 			}
 
 			pSchedule = xObjectSchedule->Next();
@@ -147,7 +145,7 @@ bool VFCScheduleModule::Execute()
 				}
 				else
 				{
-					VFINT64 nNextCostTime = VFINT64(xModuleSchedule->mfIntervalTime * 1000) * (xModuleSchedule->mnAllCount - xModuleSchedule->mnRemainCount);
+					VFINT64 nNextCostTime = VFINT64(xModuleSchedule->mfIntervalTime * 1000) * (xModuleSchedule->mnAllCount - xModuleSchedule->mnRemainCount + 1);
 					xModuleSchedule->mnNextTriggerTime = xModuleSchedule->mnStartTime + nNextCostTime;
 				}
 			}
