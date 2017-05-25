@@ -35,9 +35,6 @@
     <ClInclude Include="VFDefine.pb.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="VFProtocolDefine.hpp">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="VFLimit.h">
       <Filter>Header Files</Filter>
     </ClInclude>

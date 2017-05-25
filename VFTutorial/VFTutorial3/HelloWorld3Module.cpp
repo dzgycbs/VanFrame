@@ -1,6 +1,6 @@
 #include "HelloWorld3Module.h"
 #include "Tutorial3Plugin.h"
-#include "VFComm/VFMessageDefine/VFProtocolDefine.hpp"
+//#include "VFComm/VFMessageDefine/VFProtocolDefine.hpp"
 #include "VFComm/VFPluginModule/VFIEventModule.h"
 
 bool VFCHelloWorld3Module::Init()
